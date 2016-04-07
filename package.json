@@ -1,0 +1,40 @@
+{
+  "name": "json-hybird-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ababup1192",
+  "license": "MIT",
+  "devDependencies": {
+    "ace": "0.0.2",
+    "baconjs": "^0.7.84",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "fibers": "^1.0.10",
+    "file-loader": "^0.8.5",
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-watch": "^4.3.5",
+    "gulp-webpack": "^1.5.0",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.8.0",
+    "jquery": "^2.2.2",
+    "less": "^2.6.1",
+    "less-loader": "^2.2.3",
+    "node-sass": "^3.4.2",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "require-dir": "^0.3.0",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.0",
+    "ts-loader": "^0.8.1",
+    "webpack": "^1.12.14",
+    "webpack-core": "^0.6.8",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

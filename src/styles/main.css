@@ -1,0 +1,14 @@
+.container {
+   margin-top: 20px;
+}
+
+.visual-editor {
+    border: 2px solid grey;
+    height: 500px;
+    padding: 10px;
+}
+
+.var-box {
+    width: 200px;
+    padding: 5px;
+}
