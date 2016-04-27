@@ -1,2 +1,3 @@
 require('./main.css');
-require('./editor.scss');
+require('./textEditor.scss');
+require('./toggleButton.css');

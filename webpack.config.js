@@ -19,7 +19,7 @@ module.exports = [
         },
         module: {
             loaders: [
-                { test: /\.jade?$/, loader: "jade-loader" },
+                { test: /\.jade$/, loader: "jade-loader" },
                 { test: /\.tsx?$/, loader: "ts-loader" },
                 { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') },
                 { test: /\.scss$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader') },

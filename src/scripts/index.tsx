@@ -4,12 +4,13 @@ import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import * as Bacon from 'baconjs'
 
-import {Editor} from './editor.tsx'
+import VisualEditorApp from './visualEditorApp.tsx'
+import {HybridEditor} from './hybridEditor.ts'
+import TextEditor from './textEditor.ts'
 
 interface Variable {
     selectorName: string;
     selector: JQuery;
-
 }
 
 abstract class VariableCreator {
@@ -53,8 +54,30 @@ class BoolType implements Variable {
 module Main {
     export function main() {
         $(() => {
-            let editor = new Editor();
-            let boolVar = new BoolTypeCreator().create();
+
+            let textEditor = new TextEditor();
+            HybridEditor.init(textEditor);
+            const textP = textEditor.toProperty();
+
+            const appState = Bacon.combineTemplate({
+                json: textP
+            });
+
+            appState.onValue((state: { json: Object }) => {
+                console.log(state);
+                ReactDOM.render(<VisualEditorApp {...state}/>, document.getElementById('visual-editor'));
+            });
+
+            // let boolVar = new BoolTypeCreator().create();
+
+            /*let d = new Dispatcher();
+            d.stream('hello');
+            d.stream('world');
+            
+            d.push('hello', true);
+            
+            console.log(d);
+            */
             /*
             let boolVar = $('#bool-var');
             let stringVar = $('#string-var');
