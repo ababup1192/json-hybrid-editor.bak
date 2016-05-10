@@ -12,12 +12,15 @@ export default class VisualEditorApp extends React.Component<{ json: Object }, a
             return <ToggleButtonComponent key={ new Date().getDate() } checked={ json as boolean } />;
         } else if (typeof json === 'number') {
             return <NumberInputComponent key={ new Date().getDate() } value={ json as number } />;
-        } else if(typeof json === 'string'){
-            return <StringInputComponent key={ new Date().getDate() } value={ json as string } />;
-        }else if(json === null){
+        } else if (typeof json === 'string') {
+            if (HybridEditor.getText() === "") {
+                return null;
+            } else {
+                return <StringInputComponent key={ new Date().getDate() } value={ json as string } />;
+            }
+        } else if (json === null) {
             return <span className="btn btn-default">null</span>
-        }
-         else {
+        } else {
             return null;
         }
     }

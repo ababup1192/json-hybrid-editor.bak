@@ -7,7 +7,7 @@ module.exports = [
         entry: {
             app: [
                 './src/index.jade',
-                './src/scripts/index.tsx',
+                './src/scripts/main.tsx',
                 './src/styles/loader.js',
                 'webpack/hot/dev-server'
             ]

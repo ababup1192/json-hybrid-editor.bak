@@ -14,4 +14,8 @@ export namespace HybridEditor {
     export function writeTextEditor(json: any) {
         textEditor.setValue(String(json));
     }
+
+    export function getText(): string {
+        return textEditor.getValue();
+    }
 }
