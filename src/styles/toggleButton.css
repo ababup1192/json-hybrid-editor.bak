@@ -82,3 +82,8 @@
 .tgl-skewed:checked + .tgl-btn:active:after {
   left: 10%;
 }
+
+.tgl-btns {
+  margin-left: 10px;
+  float: right;
+}

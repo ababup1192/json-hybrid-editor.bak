@@ -55,18 +55,21 @@ module Main {
     export function main() {
         $(() => {
 
-            let textEditor = new TextEditor();
+            const textEditor = new TextEditor();
             HybridEditor.init(textEditor);
             const textP = textEditor.toProperty();
 
             const appState = Bacon.combineTemplate({
                 json: textP
             });
-
+            
+            // メイン処理
+            /*
             appState.onValue((state: { json: Object }) => {
                 console.log(state);
                 ReactDOM.render(<VisualEditorApp {...state}/>, document.getElementById('visual-editor'));
             });
+            */
 
             // let boolVar = new BoolTypeCreator().create();
 
