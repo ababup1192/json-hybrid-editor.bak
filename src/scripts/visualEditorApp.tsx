@@ -62,7 +62,7 @@ class StringInputComponent extends React.Component<IStringInputProps, { value: s
     }
 
     public handleChange(e: any): void {
-        this.setState(e.target.value);
+        this.setState({ value: e.target.value });
         HybridEditor.writeTextEditor(JSON.stringify(e.target.value));
     }
 
@@ -102,7 +102,10 @@ class NumberInputComponent extends React.Component<INumberInputProps, { value: n
     }
 
     public handleChange(e: any): void {
-        this.setState(e.target.value);
+        console.log("=======");
+        console.log(this.props);
+        console.log("=======");
+        this.setState({ value: e.target.value });
         HybridEditor.writeTextEditor(e.target.value);
     }
 
